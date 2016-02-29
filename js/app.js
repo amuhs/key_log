@@ -39,6 +39,7 @@ $(document).ready(function(){
     item = $(this).parent();
     text = $(this).parent().text(); // Assigns the text from the item to text variable
     index = text.indexOf('#'); // Gets the starting index of the key
+    // The substring below is assuming a 5 character key with an octothorpe (hashtag) preceding it
     str = text.substring(index, index + 6); // Assigns a substring of the original text to str
     item.empty().remove(); // Removes the div/item from the "out" bin
     $('<div class="item hover"><h2>' + str + '</h2></div>').show('slow').appendTo(".left");
