@@ -35,13 +35,12 @@ $(document).ready(function(){
   });
 
   $('.right').on('click', '.remove', function(){
-    var item, text, index, str;
+    var item, text, re, key;
     item = $(this).parent();
     text = $(this).parent().text(); // Assigns the text from the item to text variable
-    index = text.indexOf('#'); // Gets the starting index of the key
-    // The substring below is assuming a 5 character key with an octothorpe (hashtag) preceding it
-    str = text.substring(index, index + 6); // Assigns a substring of the original text to str
+    re = /#\w+\n/; // Looks for an octothorpe (#) and the letters following before the next \n
+    key = text.match(re); // Matches the regex and assigns it to key
     item.parent().remove(); // Removes the div/item from the "out" bin
-    $('<div class="item hover"><h2>' + str + '</h2></div>').show('slow').appendTo(".left");
+    $('<div class="item hover"><h2>' + key + '</h2></div>').show('slow').appendTo(".left");
   });
 });
