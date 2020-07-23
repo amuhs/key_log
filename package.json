@@ -1,0 +1,27 @@
+{
+  "name": "key-log",
+  "version": "1.0.0",
+  "description": "Simple web application to sign keys in and out.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://amuhs@github.com/amuhs/key_log.git"
+  },
+  "keywords": [
+    "keys",
+    "log"
+  ],
+  "author": "Andrew Muhs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amuhs/key_log/issues"
+  },
+  "homepage": "https://github.com/amuhs/key_log#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
+  }
+}
