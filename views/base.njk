@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block title %}{% endblock %}
+    <link rel="icon" href="/images/key-logo.svg" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+      <header>
+        <a href="/"><img src="/images/key-logo.svg" alt="Key Log Logo" class="logo" /></a>
+        <nav>
+          <ul class="nav__links">
+            <li><a href="/manage/">Manage</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        {% block main %}{% endblock %}
+      </main>
+      <footer class="footer">
+        <p>Copyright &copy; 2020 <a href="https://amuhs.github.io/"> Andrew Muhs</a></p>
+        <p>Icons made by <a href="https://creativemarket.com/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+      </footer>
+    {% block script %}{% endblock %}
+  </body>
+</html>

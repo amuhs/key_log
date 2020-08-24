@@ -22,6 +22,8 @@
   "homepage": "https://github.com/amuhs/key_log#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nedb": "^1.8.0"
+    "jsonschema": "^1.2.6",
+    "nedb": "^1.8.0",
+    "nunjucks": "^3.2.2"
   }
 }

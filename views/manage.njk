@@ -1,0 +1,19 @@
+{% extends "base.njk" %}
+
+{% block title %}
+<title>Key Log | Manage</title>
+{% endblock %}
+
+{% block main %}
+<h1 class="title unica-one">Manage Keys</h1>
+<br/>
+<form>
+    <label for="label">Label:</label>
+    <input type="text" id="label" name="label" placeholder=" Label Text" />
+    <button type="button">Submit</button>
+</form>
+{% endblock %}
+
+{% block script %}
+<script src="/js/manage.js"></script>
+{% endblock %}
