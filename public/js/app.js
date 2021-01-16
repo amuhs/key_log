@@ -23,7 +23,7 @@ async function getKeys() {
   const root = document.getElementById("root");
 
   for (key of keys) {
-    let newButton = document.createElement("button");
+    let newButton = document.createElement("span");
     newButton.className = "key";
     newButton.type = "button";
     newButton.textContent = `${key.label}`;

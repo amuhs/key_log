@@ -90,7 +90,7 @@ app.get("/keys", (request, response) => {
 // Gets a specific key by _id
 app.get("/keys/:id", (request, response) => {
   const keyID = request.params.id;
-  db.find({_id: keyID}, (err, key) => {
+  db.find({ _id: keyID }, (err, key) => {
     if (err) {
       console.error("Sending failure to client...");
       response.json({
@@ -180,12 +180,30 @@ app.put("/keys/:id", (request, response) => {
   });
 });
 
-// Removes a single key from the DB
-app.delete("/keys/:id", (request, response) => {
-  // TODO
-});
-
 // Removes all keys in the supplied JSON
 app.delete("/keys", (request, response) => {
-  // TODO
+  const ids = request.body.ids;
+  console.log(ids);
+  let allIDs = ids.map((idObj) => {
+    _id: idObj;
+  });
+  console.log(allIDs);
+  // db.remove({ _id: ids }, { multi: true }, (err, numRemoved) => {
+  //   if (err) {
+  //     console.error("Sending failure to client...");
+  //     response.json({
+  //       error: {
+  //         code: 500,
+  //         message: "Failed to delete keys.",
+  //       },
+  //     });
+  //     response.end();
+  //   } else {
+  //     console.log("Sending success to client...");
+  //     response.json({
+  //       data: `Deleted ${numRemoved} keys.`,
+  //     });
+  //     response.end();
+  //   }
+  // });
 });

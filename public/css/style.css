@@ -65,6 +65,7 @@ h1 {
   margin-top: 25px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .key {
@@ -108,3 +109,22 @@ footer a {
 footer a:hover {
   color: var(--link-hover-color);
 }
+
+form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+form label {
+  display: none;
+}
+
+.selected {
+  background-color: rgb(205, 68, 76);
+  transition: all 0.3s ease 0s;
+}
+
+.selected:hover {
+  background-color: rgba(205, 68, 76, 0.7);
+}
+
